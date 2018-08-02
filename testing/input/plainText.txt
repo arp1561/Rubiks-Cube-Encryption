@@ -1,3 +1,2 @@
-aa bb cc dd
-my name is arpit joshi
-i go to school
+My name is arpit
+how are you
