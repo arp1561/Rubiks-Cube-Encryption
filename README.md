@@ -21,5 +21,7 @@ Following things can be noticed -
 ## How to run
 1. Make sure you have at least c++11 compiler on your device.
 2. Clone this repo. `git clone https://github.com/arp1561/Rubiks-Cube-Encryption`
-3. Navigate to the root folder and run the **driver.cpp** program with the following command.
-`g++ driver.cpp src/Decryption.cpp src/Ecryption.cpp src/Cube.cpp src/Generator.cpp src/Converter.cpp `
+3. Navigate to the testing folder and run the **EncrptionTest.cpp** program with the following command.
+`g++ EncryptionTest.cpp src/Ecryption.cpp src/Cube.cpp src/Generator.cpp src/Converter.cpp ` for **encryption**.
+4. Navigate to the testing folder and run the **DecryptionTest.cpp** program with the following command.
+`g++ DecryptionTest.cpp src/Ecryption.cpp src/Cube.cpp src/Generator.cpp src/Converter.cpp ` for **Decryption**.
