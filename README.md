@@ -1,4 +1,4 @@
-#Rubiks Encryption Algorithm
+# Rubiks Encryption Algorithm
 The algorithm is a substitution cipher algorithm used to reduce the common number of occurences. This is done with the use of three rubiks cube (3x3x3) and each character is assigned a random cube which is chosen from a evenly distributed randomly generated sequence.
 
 The key generation is done by creating a randomly generated and evenly distributed of length 100. The key performs the following 12 operations on the cube -
@@ -18,7 +18,7 @@ Following things can be noticed -
 - The ` character is a special character that is used for spaces. 
 
 
-##How to run
+## How to run
 1. Make sure you have at least c++11 compiler on your device.
 2. Clone this repo. `git clone https://github.com/arp1561/Rubiks-Cube-Encryption`
 3. Navigate to the root folder and run the **driver.cpp** program with the following command.
