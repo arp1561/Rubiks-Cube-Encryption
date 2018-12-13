@@ -5,7 +5,9 @@
 using namespace std;
 signed main()
 {
-    string a = "1a2b";
-    cout<<stoi(a);
+	string line;
+	ifstream f("output/cube-selection-sequence/sequence.txt");
+	for(line;getline(f,line);) cout<<line<<endl;
+
 }
 

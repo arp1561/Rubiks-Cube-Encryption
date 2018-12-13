@@ -1,8 +1,11 @@
 #include<bits/stdc++.h>
+#include <chrono>
 #include "../header/Encryption.h"
 #include "../header/Generator.h"
 #include "../header/Cube.h"
 using namespace std;
+using namespace std::chrono;
+
 ofstream outputCubeSelSeq("output/cube-selection-sequence/sequence.txt");
 void Encryption::keyGeneration()
 {
@@ -47,8 +50,10 @@ void Encryption::generateRandomCubeSelectionSequence(string plainTextIteration)
 
 	//write sequence to file
 	random_shuffle(randomCubeSelectionSequence.begin(),randomCubeSelectionSequence.end());
+	cout<<"Writing random sequence to file\n";
 	for(const auto& p:randomCubeSelectionSequence) outputCubeSelSeq<<p;
 	outputCubeSelSeq<<endl;
+	cout<<"Written sequence to file\n";
 }
 string Encryption::mapValues1(char c)
 {
@@ -98,7 +103,7 @@ void Encryption::encryptLine(string plaintTextLine)
 		(plaintTextLine[i]!=' ')?plainTextIteration+=toupper(plaintTextLine[i]):plainTextIteration+='`';
 	
 	//uncomment to view modified plaintext
-	cout<<plainTextIteration<<endl;
+	//cout<<plainTextIteration<<endl;
 	generateRandomCubeSelectionSequence(plainTextIteration);
 	mapPlainText(plainTextIteration);
 }
@@ -112,7 +117,7 @@ void Encryption::encryptDriver()
 	faceValues1 = c1.generateRubiksCubeEncryption(keyDecimal1,"1");
 	faceValues2 = c2.generateRubiksCubeEncryption(keyDecimal2,"2");
 	faceValues3 = c3.generateRubiksCubeEncryption(keyDecimal3,"3");
-	//uncomment to output plainText
+	/*uncomment to output plainText
 	//for(const auto& p:plainText) cout<<p<<"\n"; 
 	for(const auto& p:faceValues1) cout<<p<<" ";
 	cout<<endl;
@@ -120,7 +125,7 @@ void Encryption::encryptDriver()
 	cout<<endl;
 	for(const auto& p:faceValues3) cout<<p<<" ";
 	cout<<endl;
-
+	*/
 	ofstream out("output/ciphertext/cipherText.txt");
 	for(const auto& p:plainTextVector) 
 	{
@@ -134,6 +139,7 @@ void Encryption::encryptDriver()
 	
 }
 void Encryption::encrypt()
-{
+{	
 	encryptDriver(); //calls driver function
+	outputCubeSelSeq.close();
 }

@@ -5,7 +5,7 @@ int main()
 {
 	Decryption d;
 	d.readFiles();
-	d.decrypt();
+	// d.decrypt();
 	//string cipherString = "33 40 50 54 54 4A 41 53 4A 56 25 ";
 	//vector<string> cipher = d.generateCipherTextLine(cipherString);
 	//d.mapValues1("58");
