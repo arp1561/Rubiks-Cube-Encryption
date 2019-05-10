@@ -5,7 +5,7 @@ using namespace std;
 void Decryption::readFiles()
 {
 
-	ifstream key1("/home/arpit/github/Rubiks-Cube-Encryption/testing/output/keys/key1.txt"),key2("/home/arpit/github/Rubiks-Cube-Encryption/testing/output/keys/key2.txt"),key3("/home/arpit/github/Rubiks-Cube-Encryption/testing/output/keys/key3.txt");
+	ifstream key1("/home/mrijoe/Desktop/Rubiks-Cube-Encryption/testing/output/keys/key1.txt"),key2("/home/mrijoe/Desktop/Rubiks-Cube-Encryption/testing/output/keys/key2.txt"),key3("/home/mrijoe/Desktop/Rubiks-Cube-Encryption/testing/output/keys/key3.txt");
 	for(string line;getline(key1,line);) keyDecimal1.push_back(stoi(line));
 	for(string line;getline(key2,line);) keyDecimal2.push_back(stoi(line));
 	for(string line;getline(key3,line);) keyDecimal3.push_back(stoi(line));
@@ -23,9 +23,9 @@ void Decryption::readFiles()
 	// cout<<endl;
 
 	
-	ifstream randomAsciiSet1("/home/arpit/github/Rubiks-Cube-Encryption/testing/output/random-ascii-values/randomAsciiValues1.txt");
-	ifstream randomAsciiSet2("/home/arpit/github/Rubiks-Cube-Encryption/testing/output/random-ascii-values/randomAsciiValues2.txt");
-	ifstream randomAsciiSet3("/home/arpit/github/Rubiks-Cube-Encryption/testing/output/random-ascii-values/randomAsciiValues3.txt");
+	ifstream randomAsciiSet1("/home/mrijoe/Desktop/Rubiks-Cube-Encryption/testing/output/random-ascii-values/randomAsciiValues1.txt");
+	ifstream randomAsciiSet2("/home/mrijoe/Desktop/Rubiks-Cube-Encryption/testing/output/random-ascii-values/randomAsciiValues2.txt");
+	ifstream randomAsciiSet3("/home/mrijoe/Desktop/Rubiks-Cube-Encryption/testing/output/random-ascii-values/randomAsciiValues3.txt");
 	for(string line;getline(randomAsciiSet1,line);) randomAsciiSetDecimal1.push_back(stoi(line));
 	for(string line;getline(randomAsciiSet2,line);) randomAsciiSetDecimal2.push_back(stoi(line));
 	for(string line;getline(randomAsciiSet3,line);) randomAsciiSetDecimal3.push_back(stoi(line));	
@@ -55,7 +55,7 @@ void Decryption::readFiles()
 	// for(const auto& p:randomCubeSelectionVector) cout<<p<<" ";
 	
 
-	ifstream CT("/home/arpit/github/Rubiks-Cube-Encryption/testing/output/ciphertext/cipherText.txt");
+	ifstream CT("/home/mrijoe/Desktop/Rubiks-Cube-Encryption/testing/output/ciphertext/cipherText.txt");
 	// cout<<"[+] Read ciphertext\n";
 	for(string line;getline(CT,line);) cipherTextVector.push_back(line);
 
@@ -110,12 +110,12 @@ void Decryption::decrypt()
 	// cout<<"initializing FaceValues\n";
 	initializeFaceValues();
 	// cout<<"initialized FaceValues\n";
-	ofstream plainTextOutput("/home/arpit/github/Rubiks-Cube-Encryption/testing/output/plaintext/plainText.txt");
+	ofstream plainTextOutput("/home/mrijoe/Desktop/Rubiks-Cube-Encryption/testing/output/plaintext/plainText.txt");
 	// cout<<"Starting decrypt loop\n";
 	// cout<<cipherTextVector.size();
 
 	vector<string> x;
-	ifstream in("/home/arpit/github/Rubiks-Cube-Encryption/testing/input/plainText.txt");
+	ifstream in("/home/mrijoe/Desktop/Rubiks-Cube-Encryption/testing/input/plainText.txt");
 	string line;
 	cout<<"[+] Decrypted text --------->";
 	for(line;getline(in,line);)

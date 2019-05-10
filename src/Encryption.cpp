@@ -6,7 +6,7 @@
 using namespace std;
 using namespace std::chrono;
 
-ofstream outputCubeSelSeq("/home/arpit/github/Rubiks-Cube-Encryption/testing/output/cube-selection-sequence/sequence.txt");
+ofstream outputCubeSelSeq("/home/mrijoe/Desktop/Rubiks-Cube-Encryption/testing/output/cube-selection-sequence/sequence.txt");
 void Encryption::keyGeneration()
 {
 	Generator genObj1,genObj2,genObj3;
@@ -21,7 +21,7 @@ void Encryption::keyGeneration()
 }
 void Encryption::readFile()
 {
-	ifstream in("/home/arpit/github/Rubiks-Cube-Encryption/testing/input/plainText.txt");
+	ifstream in("/home/mrijoe/Desktop/Rubiks-Cube-Encryption/testing/input/plainText.txt");
 	string line;
 	for(line;getline(in,line);)
 	{
@@ -125,7 +125,7 @@ void Encryption::encryptDriver()
 	for(const auto& p:faceValues3) cout<<p<<" ";
 	cout<<endl;
 	*/
-	ofstream out("/home/arpit/github/Rubiks-Cube-Encryption/testing/output/ciphertext/cipherText.txt");
+	ofstream out("/home/mrijoe/Desktop/Rubiks-Cube-Encryption/testing/output/ciphertext/cipherText.txt");
 	cout<<"[+] Encryption ----> ";
 	for(const auto& p:plainTextVector) 
 	{
