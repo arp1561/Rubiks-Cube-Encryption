@@ -22,7 +22,7 @@ int main()
 			cout<<"Completed.";
 			
 		}
-		else exit(0);
+		else cout<<"WRONG";
 	}
 	else if(choice==2)
 	{
@@ -33,9 +33,7 @@ int main()
 		if(answer=="y" or answer=="yes")
 		{
 			Decryption d;
-			d.readFiles();
 			d.decrypt();
-			cout<<"Completed.";
 			exit(0);
 		}
 		else exit(0);
