@@ -9,7 +9,7 @@ void Decryption::readFiles()
 	for(string line;getline(key1,line);) keyDecimal1.push_back(stoi(line));
 	for(string line;getline(key2,line);) keyDecimal2.push_back(stoi(line));
 	for(string line;getline(key3,line);) keyDecimal3.push_back(stoi(line));
-	cout<<"[+] Read keys\n";
+	// cout<<"[+] Read keys\n";
 
 	// OUTPUT KEYS BY UNCOMMENTING THIS
 	// cout<<keyDecimal1.size()<<endl;
@@ -29,7 +29,7 @@ void Decryption::readFiles()
 	for(string line;getline(randomAsciiSet1,line);) randomAsciiSetDecimal1.push_back(stoi(line));
 	for(string line;getline(randomAsciiSet2,line);) randomAsciiSetDecimal2.push_back(stoi(line));
 	for(string line;getline(randomAsciiSet3,line);) randomAsciiSetDecimal3.push_back(stoi(line));	
-	cout<<"[+] Read ascii\n";
+	// cout<<"[+] Read ascii\n";
 
 
 	// OUTPUT ASCII VALUES BY UNCOMMENTING THIS
@@ -49,14 +49,14 @@ void Decryption::readFiles()
 	{
 		randomCubeSelectionVector.push_back(str);
 	}
-	cout<<"[+] Read cube sequence\n";
+	// cout<<"[+] Read cube sequence\n";
 	// UNCOMMENT FOR CUBE SEQUENCE OUTPUT
 	// cout<<randomCubeSelectionVector.size()<<endl;
 	// for(const auto& p:randomCubeSelectionVector) cout<<p<<" ";
 	
 
 	ifstream CT("/home/arpit/github/Rubiks-Cube-Encryption/testing/output/ciphertext/cipherText.txt");
-	cout<<"[+] Read ciphertext\n";
+	// cout<<"[+] Read ciphertext\n";
 	for(string line;getline(CT,line);) cipherTextVector.push_back(line);
 
 	// UNCOMMENT FOR CT OUTPUT IN HEX
@@ -107,16 +107,17 @@ void Decryption::decrypt()
 	
 	
 
-	cout<<"initializing FaceValues\n";
+	// cout<<"initializing FaceValues\n";
 	initializeFaceValues();
-	cout<<"initialized FaceValues\n";
+	// cout<<"initialized FaceValues\n";
 	ofstream plainTextOutput("/home/arpit/github/Rubiks-Cube-Encryption/testing/output/plaintext/plainText.txt");
-	cout<<"Starting decrypt loop\n";
-	cout<<cipherTextVector.size();
+	// cout<<"Starting decrypt loop\n";
+	// cout<<cipherTextVector.size();
 
 	vector<string> x;
 	ifstream in("/home/arpit/github/Rubiks-Cube-Encryption/testing/input/plainText.txt");
 	string line;
+	cout<<"[+] Decrypted text --------->";
 	for(line;getline(in,line);)
 	{
 

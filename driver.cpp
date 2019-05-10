@@ -19,7 +19,7 @@ int main()
 		{
 			Encryption e;
 			e.encryptDriver();
-			cout<<"Completed.";
+			cout<<"[+] Completed.";
 			
 		}
 		else cout<<"WRONG";
@@ -34,6 +34,7 @@ int main()
 		{
 			Decryption d;
 			d.decrypt();
+			cout<<"[+] Completed";
 			exit(0);
 		}
 		else exit(0);

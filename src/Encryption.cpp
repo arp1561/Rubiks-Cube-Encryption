@@ -50,10 +50,9 @@ void Encryption::generateRandomCubeSelectionSequence(string plainTextIteration)
 
 	//write sequence to file
 	random_shuffle(randomCubeSelectionSequence.begin(),randomCubeSelectionSequence.end());
-	cout<<"Writing random sequence to file\n";
 	for(const auto& p:randomCubeSelectionSequence) outputCubeSelSeq<<p;
 	outputCubeSelSeq<<endl;
-	cout<<"Written sequence to file\n";
+	// cout<<"Written sequence to file\n";
 }
 string Encryption::mapValues1(char c)
 {
@@ -127,6 +126,7 @@ void Encryption::encryptDriver()
 	cout<<endl;
 	*/
 	ofstream out("/home/arpit/github/Rubiks-Cube-Encryption/testing/output/ciphertext/cipherText.txt");
+	cout<<"[+] Encryption ----> ";
 	for(const auto& p:plainTextVector) 
 	{
 		encryptLine(p); 
@@ -134,8 +134,12 @@ void Encryption::encryptDriver()
 		
 		for(const auto& j:cipherTextVector) out<<j<<" ";
 		out<<endl;
+		for(const auto& j:cipherTextVector) cout<<j<<" ";
+
 		cipherTextVector.clear();
+
 	}
+	cout<<"\n";
 	
 }
 void Encryption::encrypt()
